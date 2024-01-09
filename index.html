@@ -6,21 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tailwind Project</title>
     <link href="./output.css" rel="stylesheet">
-
 </head>
 
 <body>
-    <h1 class="font-bold underline">
-        Hello world!
-    </h1>
-    <form>
+    <form id="contactForm">
         <div class="space-y-12 px-8 lg:px-48">
             <div class="border-b border-t border-gray-900/10 pb-12">
                 <div class="grid grid-cols-1 sm:grid-cols-6 gap-x-6">
                     <div class="sm:col-span-3 lg:col-span-3">
                         <h2 class="text-base font-semibold leading-7 text-gray-900 pt-12">Contact Us</h2>
                         <!-- Use col-span-3 at larger screen sizes to make the paragraph take up half the grid -->
-                        <p class="mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">Complete and submit the contact form below to
+                        <p class="mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">Complete and submit the contact
+                            form below to
                             inquire about our services or a specific job. We’ll make it our promise to get back to you
                             within 24-48 hours.</p>
                     </div>
@@ -32,7 +29,8 @@
                             name</label>
                         <div class="mt-2">
                             <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                required>
                         </div>
                     </div>
 
@@ -41,7 +39,8 @@
                             name</label>
                         <div class="mt-2">
                             <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                required>
                         </div>
                     </div>
 
@@ -49,8 +48,11 @@
                         <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email
                             address</label>
                         <div class="mt-2">
-                            <input id="email" name="email" type="email" autocomplete="email"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <input type="email" id="email" name="email" autocomplete="email"
+       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
+       required>
+                            <span id="emailError" class="hidden text-sm text-red-600">Invalid email address</span>
+
                         </div>
                     </div>
 
@@ -64,17 +66,25 @@
                     </div>
 
                     <div class="col-span-full">
-                        <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Description of
+                        <label for="inquiry" class="block text-sm font-medium leading-6 text-gray-900">Description of
                             Inquiry</label>
                         <div class="mt-2">
-                            <textarea id="about" name="about" rows="3"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                            <textarea id="inquiry" name="inquiry" rows="3"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                required></textarea>
                         </div>
                     </div>
                 </div>
+                <div class="mt-6 flex items-center justify-end gap-x-6">
+                    <button type="submit"
+                        class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                </div>
             </div>
+
         </div>
+
     </form>
+    <script src="/validation.js"></script>
 </body>
 
 </html>
