@@ -5,12 +5,12 @@
   "main": "tailwind.config.js",
   "scripts": {
     "build-css": "tailwindcss -i ./styles.css -o ./output.css --watch"
-  }
-  ,
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "tailwindcss": "^3.4.1"
   }
 }
