@@ -1,0 +1,16 @@
+{
+  "name": "ctc",
+  "version": "1.0.0",
+  "description": "site for ctc",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./styles.css -o ./output.css --watch"
+  }
+  ,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
