@@ -878,10 +878,6 @@ select {
   line-height: 1.25rem;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -916,10 +912,6 @@ select {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .shadow-sm {
@@ -966,11 +958,6 @@ select {
 
 .focus\:ring-inset:focus {
   --tw-ring-inset: inset;
-}
-
-.focus\:ring-error:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(248 113 113 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-indigo-600:focus {
@@ -1022,44 +1009,4 @@ select {
     padding-left: 12rem;
     padding-right: 12rem;
   }
-}
-
-.invalid\:\[\&\:not\(\:-moz-placeholder-shown\)\:not\(\:focus\)\]\:border-red-500:not(:-moz-placeholder-shown):not(:focus):invalid {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
-.invalid\:\[\&\:not\(\:placeholder-shown\)\:not\(\:focus\)\]\:border-red-500:not(:placeholder-shown):not(:focus):invalid {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
-.invalid\:\[\&\:not\(\:-moz-placeholder-shown\)\:not\(\:focus\)\]\:ring-red-500:not(:-moz-placeholder-shown):not(:focus):invalid {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
-}
-
-.invalid\:\[\&\:not\(\:placeholder-shown\)\:not\(\:focus\)\]\:ring-red-500:not(:placeholder-shown):not(:focus):invalid {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
-}
-
-.invalid\:\[\&\:not\(\:-moz-placeholder-shown\)\:not\(\:focus\)\]\:focus\:ring-red-500:focus:not(:-moz-placeholder-shown):not(:focus):invalid {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
-}
-
-.invalid\:\[\&\:not\(\:placeholder-shown\)\:not\(\:focus\)\]\:focus\:ring-red-500:focus:not(:placeholder-shown):not(:focus):invalid {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
-}
-
-.invalid\:\[\&\:not\(\:-moz-placeholder-shown\)\:not\(\:focus\:ring-red-500\)\]\:border-red-500:not(:-moz-placeholder-shown):not(:focus:ring-red-500):invalid {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
-.invalid\:\[\&\:not\(\:placeholder-shown\)\:not\(\:focus\:ring-red-500\)\]\:border-red-500:not(:placeholder-shown):not(:focus:ring-red-500):invalid {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
