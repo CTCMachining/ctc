@@ -11,20 +11,21 @@
 <body>
     <!-- About us -->
     <div class="px-8 lg:px-48">
-        <div class="border-t border-gray-900/10 "></div>
+        <div class="border-t border-gray-900/10"></div>
     </div>
     <div class="px-8 lg:px-24 sm:overflow-hidden">
         <div class="py-12">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                <div class="flex flex-col justify-center items-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+                <div class="md:col-span-1 flex flex-col items-center justify-center">
+                        <div class="md:col-span-3 hidden sm:hidden md:flex lg:flex">
+                            <img src="images/part.jpg" alt="Machine Part" class="w-full max-w-sm md:max-w-md rounded-xl shadow-lg" />
+                        </div>
+                </div>
+                
+                <div class="flex flex-col justify-start sm:justify-center sm:items-center md:justify-center md:items-center lg:justify-center lg:items-center md:col-span-2 lg:col-span-2 ">
                     <h2 class="text-base font-semibold leading-7 text-primary">Who are we?</h2>
                     <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl pb-6">
                         About Us</p>
-                    <!-- Adjust the image size with width (w-) and max-width (max-w-) utilities -->
-                    <img src="images/part.jpg" alt="Machine Part"
-                        class=" w-full max-w-sm lg:max-w-sm rounded-xl shadow-lg " />
-                </div>
-                <div>
                     <p class="text-lg text-gray-600">CTC Machining, a CNC Milling LLC, prioritizes quality and
                         customer service. Founded and led by CEO Ben Shawver, a machining industry veteran with over 30
                         years of experience, Ben ensures every project meets high standards. His career began at Western
@@ -34,17 +35,22 @@
                     <p class="mt-6 text-lg text-gray-600">
                         Later, he returned to Ridge Engineering, managing raw material purchases and supplier
                         negotiations. After another 9 years, Ben joined Raloid Corporation as Director of Purchasing and
-                        CNC Mill and
-                        Lathe Supervisor, a role he has held for over four years. In 2022, Ben acquired a Tormach CNC
-                        Mill,
-                        leveraging his expertise to create custom parts for a diverse clientele, including commercial
+                        CNC Mill and Lathe Supervisor, a role he has held for over four years. In 2022, Ben acquired a Tormach CNC
+                        Mill, leveraging his expertise to create custom parts for a diverse clientele, including commercial
                         enterprises, private individuals, and the racing industry.
                     </p>
-                    <!-- The SVG arrow can be put here if it's meant to be aligned with the second column -->
+                    <div class="md:col-span-3 flex sm:flex md:hidden lg:hidden pt-12">
+                        <img src="images/part.jpg" alt="Machine Part" class="w-full max-w-sm md:max-w-md rounded-xl shadow-lg" />
+                    </div>
                 </div>
+                <!-- <div class="lg:hidden lg:block lg:col-span-1">
+                    <img src="images/part.jpg" alt="Machine Part" class="w-full max-w-sm lg:max-w-md rounded-xl shadow-lg" />
+                </div> -->
             </div>
         </div>
     </div>
+    
+    
 
 
     <!-- Our Services -->
