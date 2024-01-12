@@ -987,6 +987,14 @@ select {
   max-width: 100%;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1739,6 +1747,14 @@ select {
 @media (min-width: 1280px) {
   .xl\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .xl\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
   }
 
   .xl\:grid {
