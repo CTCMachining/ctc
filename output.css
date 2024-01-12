@@ -847,6 +847,26 @@ select {
   margin-left: 50%;
 }
 
+.ml-9 {
+  margin-left: 2.25rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
+.ml-48 {
+  margin-left: 12rem;
+}
+
+.ml-24 {
+  margin-left: 6rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -1622,6 +1642,26 @@ select {
 
   .lg\:pt-4 {
     padding-top: 1rem;
+  }
+
+  .lg\:pr-16 {
+    padding-right: 4rem;
+  }
+
+  .lg\:pr-24 {
+    padding-right: 6rem;
+  }
+
+  .lg\:pr-48 {
+    padding-right: 12rem;
+  }
+
+  .lg\:pr-12 {
+    padding-right: 3rem;
+  }
+
+  .lg\:pr-10 {
+    padding-right: 2.5rem;
   }
 }
 
