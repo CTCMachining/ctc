@@ -831,6 +831,11 @@ select {
   margin-right: auto;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -1190,6 +1195,14 @@ select {
   padding-bottom: 1.5rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1439,8 +1452,16 @@ select {
     row-gap: 4rem;
   }
 
+  .sm\:overflow-auto {
+    overflow: auto;
+  }
+
   .sm\:overflow-hidden {
     overflow: hidden;
+  }
+
+  .sm\:overflow-x-hidden {
+    overflow-x: hidden;
   }
 
   .sm\:object-cover {
@@ -1489,6 +1510,14 @@ select {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:overflow-auto {
+    overflow: auto;
+  }
+
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
   }
 }
 
@@ -1688,6 +1717,14 @@ select {
   .lg\:gap-x-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
+  }
+
+  .lg\:overflow-auto {
+    overflow: auto;
+  }
+
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
   }
 
   .lg\:object-contain {

@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <div class="px-8 lg:px-48 sm:overflow-hidden">
+    <!-- Our Services -->
+    <div class="px-8 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden">
         <div class="py-12 border-t border-gray-900/10 ">
             <div
                 class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-x-0 gap-y-12 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -94,126 +95,153 @@
         </div>
     </div>
 
-    <!-- Form Start -->
-    <form id="contactForm" action="http://localhost:3000/send-email" method="post">
-        <div class="space-y-12 px-8 lg:px-48">
-            <div class="border-b border-t border-gray-900/10 pb-12">
-                <div class="grid grid-cols-1 sm:grid-cols-6 gap-x-6">
-                    <div class="sm:col-span-3 lg:col-span-3">
-                        <h2 class="text-base font-semibold text-xl leading-7 text-gray-900 pt-12">Contact Us</h2>
-                        <!-- Use col-span-3 at larger screen sizes to make the paragraph take up half the grid -->
-                        <p class="mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">Complete and submit the contact
-                            form below to
-                            inquire about our services or a specific job. We’ll make it our promise to get back to you
-                            within 24-48 hours.</p>
-                    </div>
-                </div>
+    <!-- How to Work with Us -->
+    <div class="px-8 lg:px-48 sm:overflow-hidden">
+        <div class="py-12 border-b border-t border-gray-900/10 flex justify-center items-center">
+            <div class="w-full lg:max-w-lg flex justify-center items-center flex-col text-center">
+                <h2 class="text-base font-semibold leading-7 text-primary">Need Parts?</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    How To Work With Us</p>
+                <p class="mt-6 text-lg text-gray-600 mx-4">Contact us by sending an email with the part you are looking
+                    to create and/or with an inquiry regarding what you are looking for. We’ll then work with you to
+                    determine the customization required, timing, and pricing.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-arrow-down text-primary pt-6" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                  </svg>
 
-                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                    <div class="sm:col-span-3">
-                        <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First
-                            name</label>
-                        <div class="mt-2">
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="sm:col-span-3">
-                        <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last
-                            name</label>
-                        <div class="mt-2">
-                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="sm:col-span-3">
-                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email
-                            address</label>
-                        <div class="mt-2">
-                            <input type="email" id="email" name="email" autocomplete="email"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
-                                required>
-                            <span id="emailError" class="hidden text-sm text-red-600">Invalid email address</span>
-
-                        </div>
-                    </div>
-
-                    <div class="sm:col-span-3">
-                        <label for="tel" class="block text-sm font-medium leading-6 text-gray-900">Phone Number
-                            (Optional)</label>
-                        <div class="mt-2">
-                            <input id="tel" name="tel" type="tel" autocomplete="tel"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-
-                    <div class="col-span-full">
-                        <label for="inquiry" class="block text-sm font-medium leading-6 text-gray-900">Description of
-                            Inquiry</label>
-                        <div class="mt-2">
-                            <textarea id="inquiry" name="inquiry" rows="3"
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                                required></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-6 flex items-center justify-start gap-x-6">
-                    <button type="submit"
-                        class="rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primarylight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send
-                        Inquiry</button>
-                    <p class="flex items-center font-bold">OR</p>
-                </div>
-
-                <p class="py-6 mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">If you perfer to contact by phone
-                    contact us here:</p>
-                <a href="tel:+443-203-8144" class="text-primary hover:text-primarydark transition-colors duration-300">
-                    +1 (443) 203-8114
-                </a>
-            </div>
-        </div>
-    </form>
-
-    <div class="space-y-6 py-12 px-8 lg:px-48">
-        <div class="mx-auto max-w-none xl:grid xl:grid-cols-3 gap-6">
-            <div class="col-span-1 flex flex-col justify-start">
-                <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Meet our Team</h2>
-                <p class="mt-6 pb-6 text-lg leading-8 text-gray-600">We are a small, dynamic team, profoundly passionate
-                    about what we do.
-                    Our guiding principle is a steadfast commitment to quality excellence and placing customer service
-                    at the
-                    forefront.</p>
-            </div>
-            <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                <!-- Team Member 1 -->
-                <div class="flex flex-col items-center">
-                    <!-- Image and info for team member 1 -->
-                    <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="Ben Shawver">
-                    <h3 class="text-xl font-semibold mt-4">Ben Shawver</h3>
-                    <p class="text-primary">President / CEO</p>
-                </div>
-                <!-- Team Member 2 -->
-                <div class="flex flex-col items-center">
-                    <!-- Image and info for team member 2 -->
-                    <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="Carol Shawver">
-                    <h3 class="text-xl font-semibold mt-4">Carol Shawver</h3>
-                    <p class="text-primary">COO</p>
-                </div>
-                <!-- Additional team members would go here -->
             </div>
         </div>
     </div>
 
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-    <script src="validationHelper.js"></script>
+
+        <!-- Contact Us -->
+        <form id="contactForm" action="http://localhost:3000/send-email" method="post">
+            <div class="space-y-12 px-8 lg:px-48">
+                <div class="border-b border-t border-gray-900/10 pb-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-6 gap-x-6">
+                        <div class="sm:col-span-3 lg:col-span-3">
+                            <h2 class="text-base font-semibold text-xl leading-7 text-gray-900 pt-12">Contact Us</h2>
+                            <!-- Use col-span-3 at larger screen sizes to make the paragraph take up half the grid -->
+                            <p class="mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">Complete and submit the
+                                contact
+                                form below to
+                                inquire about our services or a specific job. We’ll make it our promise to get back to
+                                you
+                                within 24-48 hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div class="sm:col-span-3">
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First
+                                name</label>
+                            <div class="mt-2">
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-3">
+                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last
+                                name</label>
+                            <div class="mt-2">
+                                <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-3">
+                            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email
+                                address</label>
+                            <div class="mt-2">
+                                <input type="email" id="email" name="email" autocomplete="email"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                                    required>
+                                <span id="emailError" class="hidden text-sm text-red-600">Invalid email address</span>
+
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-3">
+                            <label for="tel" class="block text-sm font-medium leading-6 text-gray-900">Phone Number
+                                (Optional)</label>
+                            <div class="mt-2">
+                                <input id="tel" name="tel" type="tel" autocomplete="tel"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="col-span-full">
+                            <label for="inquiry" class="block text-sm font-medium leading-6 text-gray-900">Description
+                                of
+                                Inquiry</label>
+                            <div class="mt-2">
+                                <textarea id="inquiry" name="inquiry" rows="3"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center justify-start gap-x-6">
+                        <button type="submit"
+                            class="rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primarylight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send
+                            Inquiry</button>
+                        <p class="flex items-center font-bold">OR</p>
+                    </div>
+
+                    <p class="py-6 mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">If you perfer to contact by phone
+                        contact us here:</p>
+                    <a href="tel:+443-203-8144"
+                        class="text-primary hover:text-primarydark transition-colors duration-300">
+                        +1 (443) 203-8114
+                    </a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Meet the Team -->
+        <div class="space-y-6 py-12 px-8 lg:px-48">
+            <div class="mx-auto max-w-none xl:grid xl:grid-cols-3 gap-6">
+                <div class="col-span-1 flex flex-col justify-start">
+                    <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Meet our Team</h2>
+                    <p class="mt-6 pb-6 text-lg leading-8 text-gray-600">We are a small, dynamic team, profoundly
+                        passionate
+                        about what we do.
+                        Our guiding principle is a steadfast commitment to quality excellence and placing customer
+                        service
+                        at the
+                        forefront.</p>
+                </div>
+                <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <!-- Team Member 1 -->
+                    <div class="flex flex-col items-center">
+                        <!-- Image and info for team member 1 -->
+                        <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt="Ben Shawver">
+                        <h3 class="text-xl font-semibold mt-4">Ben Shawver</h3>
+                        <p class="text-primary">President / CEO</p>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="flex flex-col items-center">
+                        <!-- Image and info for team member 2 -->
+                        <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt="Carol Shawver">
+                        <h3 class="text-xl font-semibold mt-4">Carol Shawver</h3>
+                        <p class="text-primary">COO</p>
+                    </div>
+                    <!-- Additional team members would go here -->
+                </div>
+            </div>
+        </div>
+
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+        <script src="validationHelper.js"></script>
 </body>
 
 </html>
