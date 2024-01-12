@@ -15,7 +15,7 @@
                 class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-x-0 gap-y-12 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 <div class="lg:pr-16 lg:pt-4">
                     <div class="lg:max-w-lg">
-                        <h2 class="text-base font-semibold leading-7 text-primarydark">Precision Engineering</h2>
+                        <h2 class="text-base font-semibold leading-7 text-primary">Precision Engineering</h2>
                         <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                             Our Services</p>
                         <p class="mt-6 text-lg leading-8 text-gray-600">We offer 3-axis vertical milling work and can
@@ -85,10 +85,10 @@
                         </dl>
                     </div>
                 </div>
-                <div class="flex justify-center lg:justify-start items-center lg:flex items-center lg:block h-full lg:relative">
-                    <img src="images/machine-bones.jpg"
-                         alt="Machine"
-                         class="rounded-xl shadow-lg ring-1 ring-gray-400/10 w-full h-auto lg:w-[56rem] lg:max-w-none lg:h-auto object-cover lg:object-scale-down" />
+                <div
+                    class="flex justify-center lg:justify-start items-center lg:flex items-center lg:block h-full lg:relative">
+                    <img src="images/machine-bones.jpg" alt="Machine"
+                        class="rounded-xl shadow-lg ring-1 ring-gray-400/10 w-full h-auto lg:w-[56rem] lg:max-w-none lg:h-auto object-cover lg:object-scale-down" />
                 </div>
             </div>
         </div>
@@ -176,28 +176,41 @@
             </div>
         </div>
     </form>
+
     <div class="space-y-6 py-12 px-8 lg:px-48">
-        <h2 class="text-3xl font-bold">Meet our Team</h2>
-        <p class="text-lg leading-8 text-gray-600">We are a small, dynamic team, profoundly passionate about what we do.
-            Our guiding principle is a steadfast commitment to quality excellence and placing customer service at the
-            forefront.</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="flex flex-col items-center">
-                <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="Ben Shawver">
-                <h3 class="text-xl font-semibold mt-4">Ben Shawver</h3>
-                <p class="text-gray-500">President / CEO</p>
+        <div class="mx-auto max-w-7xl xl:grid xl:grid-cols-3 gap-6">
+            <div class="col-span-1 flex flex-col justify-start">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Meet our Team</h2>
+                <p class="mt-6 pb-6 text-lg leading-8 text-gray-600">We are a small, dynamic team, profoundly passionate
+                    about what we do.
+                    Our guiding principle is a steadfast commitment to quality excellence and placing customer service
+                    at the
+                    forefront.</p>
             </div>
-            <div class="flex flex-col items-center">
-                <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="Carol Shawver">
-                <h3 class="text-xl font-semibold mt-4">Carol Shawver</h3>
-                <p class="text-gray-500">COO</p>
+            <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- Team Member 1 -->
+                <div class="flex flex-col items-center">
+                    <!-- Image and info for team member 1 -->
+                    <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Ben Shawver">
+                    <h3 class="text-xl font-semibold mt-4">Ben Shawver</h3>
+                    <p class="text-primary">President / CEO</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="flex flex-col items-center">
+                    <!-- Image and info for team member 2 -->
+                    <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50"
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Carol Shawver">
+                    <h3 class="text-xl font-semibold mt-4">Carol Shawver</h3>
+                    <p class="text-primary">COO</p>
+                </div>
+                <!-- Additional team members would go here -->
             </div>
         </div>
     </div>
+
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="validationHelper.js"></script>
