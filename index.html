@@ -10,40 +10,28 @@
 
 <body>
     <!-- Landing Page -->
-    <div class="px-8 md:px-24 lg:px-48">
-        <div class="py-12 flex flex-col items-center text-center"></div>
-            <h1 class="text-5xl font-bold tracking-tight text-gray-900 text-center">Welcome to <span class="text-primary">CTC</span></h1>
+    <div class="px-8 md:px-24 lg:px-48 h-screen flex flex-col justify-center">
+        <div class="py-12 flex flex-col items-center text-center lg:px-28">
+            <h1 class="text-5xl font-bold tracking-tight text-gray-900 text-center">
+                Welcome to <span class="text-primary">CTC</span>
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">If you already know what you need, please proceed straight
+                to our inquiry form for prompt service.</p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">If this is your first visit, take a moment to learn about
+                    our high-precision machining services and industry solutions.</p>
+            <button type="button"
+                onclick="document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });"
+                class="flex flex-row items-center gap-3 rounded-md mt-6 bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primarylight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                Skip to Inquiry
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                    class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                </svg>
+            </button>
         </div>
+
     </div>
-    <!-- About us -->
-    <div class="px-8 md:px-24 lg:px-48 sm:overflow-hidden">
-        <div class="border-t  border-gray-900/10 py-12 flex flex-col items-center ">
-            <div class="w-full lg:max-w-xlg flex justify-start items-start flex-col ">
-
-            <h2 class="text-base font-semibold leading-7 text-primary">Who are we?</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl pb-6">
-                About Us</p>
-            <p class="text-lg text-gray-600">CTC Machining, a CNC Milling LLC, prioritizes quality and
-                customer service. Founded and led by CEO Ben Shawver, a machining industry veteran with over 30
-                years of experience, Ben ensures every project meets high standards. His career began at Western
-                Industrial Machining in high school, followed by a 9-year tenure at Ridge Engineering, where he
-                mastered CNC milling and programming. Ben then contributed his skills to the defense sector at
-                Orbital ATK and Fleck Machine.</p>
-            <p class="mt-6 text-lg text-gray-600">
-                Later, he returned to Ridge Engineering, managing raw material purchases and supplier
-                negotiations. After another 9 years, Ben joined Raloid Corporation as Director of Purchasing and
-                CNC Mill and Lathe Supervisor, a role he has held for over four years. In 2022, Ben acquired a Tormach
-                CNC
-                Mill, leveraging his expertise to create custom parts for a diverse clientele, including commercial
-                enterprises, private individuals, and the racing industry.
-            </p>
-            </div>
-        </div>
-    </div>
-
-
-
-
     <!-- Our Services -->
     <div class="px-8  md:px-24 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden">
         <div class="py-12 border-t border-gray-900/10 ">
@@ -238,8 +226,36 @@
         </div>
     </form>
 
+    <!-- About us -->
+    <div class="px-8 md:px-24 lg:px-48 sm:overflow-hidden">
+        <div class="py-12 flex flex-col items-center ">
+            <div class="w-full lg:max-w-xlg flex justify-start items-start flex-col ">
+
+                <h2 class="text-base font-semibold leading-7 text-primary">Who are we?</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl pb-6">
+                    About Us</p>
+                <p class="text-lg text-gray-600">CTC Machining, a CNC Milling LLC, prioritizes quality and
+                    customer service. Founded and led by CEO Ben Shawver, a machining industry veteran with over 30
+                    years of experience, Ben ensures every project meets high standards. His career began at Western
+                    Industrial Machining in high school, followed by a 9-year tenure at Ridge Engineering, where he
+                    mastered CNC milling and programming. Ben then contributed his skills to the defense sector at
+                    Orbital ATK and Fleck Machine.</p>
+                <p class="mt-6 text-lg text-gray-600">
+                    Later, he returned to Ridge Engineering, managing raw material purchases and supplier
+                    negotiations. After another 9 years, Ben joined Raloid Corporation as Director of Purchasing and
+                    CNC Mill and Lathe Supervisor, a role he has held for over four years. In 2022, Ben acquired a
+                    Tormach
+                    CNC
+                    Mill, leveraging his expertise to create custom parts for a diverse clientele, including commercial
+                    enterprises, private individuals, and the racing industry.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Meet the Team -->
-    <div class="space-y-6 py-12 px-8  md:px-24 lg:px-48">
+    <div class="space-y-6 pb-12 px-8  md:px-24 lg:px-48">
         <div class="mx-auto max-w-none xl:grid xl:grid-cols-3 gap-6">
             <div class="col-span-1 flex flex-col justify-start">
                 <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Meet our Team</h2>
