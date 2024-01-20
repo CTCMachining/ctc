@@ -28,7 +28,7 @@ const constraints = {
     }
 };
 
-const form = document.getElementById('contactForm'); // Use the correct ID
+const form = document.getElementById('contactForm contact-form-section'); // Use the correct ID
 form.addEventListener('submit', function (event) {
     const formValues = {
         'first-name': form.elements['first-name'].value,

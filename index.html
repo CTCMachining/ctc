@@ -11,7 +11,7 @@
 <body>
     <!-- Nav bar -->
     <nav class="bg-white">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8 border-b border-t border-gray-900/10">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
@@ -43,64 +43,52 @@
                 </div>
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex flex-shrink-0 items-center">
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                            alt="Your Company">
+                        <p>CTC Machining</p>
                     </div>
                     <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4" id="desktop-menu">
+                        <div class="flex space-x-4 justify-center sm:justify-start" id="desktop-menu">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             <a href="#"
-                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                aria-current="page"
-                                id="menu-who-we-are">Who we are</a>
+                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-md font-medium"
+                                aria-current="page" id="menu-who-we-are">Who we are</a>
                             <a href="#"
-                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-md font-medium"
                                 id="menu-what-we-do">What we do</a>
                             <a href="#"
-                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-md font-medium"
                                 id="menu-contact-us">Contact us</a>
                         </div>
                     </div>
                 </div>
-
-
-                <!--
-                  Dropdown menu, show/hide based on menu state.
-      
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
             </div>
-        </div>
-        </div>
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-            <div class="space-y-1 px-2 pb-3 pt-2">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#"
-                    class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                    aria-current="page"
-                    id="menu-who-we-are-mobile">Who we are</a>
-                <a href="#"
-                    class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                    id="menu-what-we-do-mobile">What we do</a>
-                <a href="#"
-                    class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                    id="menu-contact-us-mobile">Contact us</a>
-            </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+<div class="sm:hidden fixed top-16 inset-x-0 z-50" id="mobile-menu">
+    <div class="space-y-1 px-2 pt-1 pb-2 border-gray-900/10"> <!-- Added top padding (adjust as needed) -->
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#"
+            class="text-gray-900 bg-white hover:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium border-b border-gray-900/10 flex items-center"
+            aria-current="page" id="menu-who-we-are-mobile">Who we are</a>
+        <a href="#"
+            class="text-gray-900 bg-white hover:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium border-b border-gray-900/10"
+            id="menu-what-we-do-mobile">What we do</a>
+        <a href="#"
+            class="text-gray-900 bg-white hover:bg-gray-900 hover:text-white block px-3 py-2 text-base font-medium border-b border-gray-900/10"
+            id="menu-contact-us-mobile">Contact us</a>
+    </div>
+</div>
+
+
         </div>
+
     </nav>
 
 
 
     <!-- Landing Page -->
-    <div class="px-8 md:px-24 lg:px-48 h-screen flex flex-col justify-center">
+    <div class="px-8 md:px-24 lg:px-48 h-screen flex flex-col justify-center" style="height: calc(100vh - 4rem)">
         <div class="py-12 flex flex-col items-center text-center lg:px-28">
             <h1 class="text-5xl font-bold tracking-tight text-gray-900 text-center">
                 Welcome to <span class="text-primary">CTC</span>
@@ -125,7 +113,8 @@
 
     </div>
     <!-- Our Services -->
-    <div class="px-8  md:px-24 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden" id="our-services-section">
+    <div class="px-8  md:px-24 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden"
+        id="our-services-section">
         <div class="py-12 border-t border-gray-900/10 ">
             <div
                 class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-x-0 gap-y-12 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">

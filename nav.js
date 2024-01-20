@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Toggle the hidden class on the mobile menu
         mobileMenu.hidden = !mobileMenu.hidden;
+
+        // Add/Remove transition classes based on menu state
+        if (mobileMenu.hidden) {
+            mobileMenu.classList.remove('transition', 'ease-out', 'duration-100');
+            mobileMenu.classList.add('transition', 'ease-in', 'duration-75');
+        } else {
+            mobileMenu.classList.remove('transition', 'ease-in', 'duration-75');
+            mobileMenu.classList.add('transition', 'ease-out', 'duration-100');
+        }
     });
 
     // Add transition effects
@@ -33,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const section = document.getElementById(sectionId);
 
         const scrollPosition = section.offsetTop - document.querySelector('nav').offsetHeight + 70;
-
 
         // Scroll to the calculated position
         window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
@@ -66,5 +74,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('menu-contact-us-mobile').addEventListener('click', function () {
         scrollToSection('contactForm contact-form-section');
+    });
+
+    // Add scroll event listener to close the mobile menu
+    window.addEventListener('scroll', function () {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+
+        if (isExpanded) {
+            // Close the mobile menu
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenu.hidden = true;
+        }
     });
 });
