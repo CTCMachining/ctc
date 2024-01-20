@@ -4,21 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tailwind Project</title>
+    <title>CTC Machining</title>
     <link href="./output.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Nav bar -->
+    <nav class="bg-white">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                            alt="Your Company">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4" id="desktop-menu">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#"
+                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                aria-current="page"
+                                id="menu-who-we-are">Who we are</a>
+                            <a href="#"
+                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                id="menu-what-we-do">What we do</a>
+                            <a href="#"
+                                class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                id="menu-contact-us">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#"
+                    class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                    aria-current="page"
+                    id="menu-who-we-are-mobile">Who we are</a>
+                <a href="#"
+                    class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                    id="menu-what-we-do-mobile">What we do</a>
+                <a href="#"
+                    class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                    id="menu-contact-us-mobile">Contact us</a>
+            </div>
+        </div>
+    </nav>
+
+
+
     <!-- Landing Page -->
     <div class="px-8 md:px-24 lg:px-48 h-screen flex flex-col justify-center">
         <div class="py-12 flex flex-col items-center text-center lg:px-28">
             <h1 class="text-5xl font-bold tracking-tight text-gray-900 text-center">
                 Welcome to <span class="text-primary">CTC</span>
             </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">A CNC Milling company where quality and customer service is
+                our #1 priority.</p>
             <p class="mt-6 text-lg leading-8 text-gray-600">If you already know what you need, please proceed straight
                 to our inquiry form for prompt service.</p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">If this is your first visit, take a moment to learn about
-                    our high-precision machining services and industry solutions.</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">If this is your first visit, take a moment to learn about
+                our high-precision machining services and industry solutions.</p>
             <button type="button"
                 onclick="document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });"
                 class="flex flex-row items-center gap-3 rounded-md mt-6 bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primarylight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
@@ -33,7 +125,7 @@
 
     </div>
     <!-- Our Services -->
-    <div class="px-8  md:px-24 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden">
+    <div class="px-8  md:px-24 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden" id="our-services-section">
         <div class="py-12 border-t border-gray-900/10 ">
             <div
                 class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-x-0 gap-y-12 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -141,7 +233,7 @@
 
 
     <!-- Contact Us -->
-    <form id="contactForm" action="http://localhost:3000/send-email" method="post">
+    <form id="contactForm contact-form-section" action="http://localhost:3000/send-email" method="post">
         <div class="space-y-12 px-8  md:px-24 lg:px-48">
             <div class="border-b border-t border-gray-900/10 pb-12">
                 <div class="grid grid-cols-1 sm:grid-cols-6 gap-x-6">
@@ -217,8 +309,8 @@
                     <p class="flex items-center font-bold">OR</p>
                 </div>
 
-                <p class="py-6 mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">If you perfer to contact by phone
-                    contact us here:</p>
+                <p class="py-6 mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">If you prefer to contact us by phone,
+                    give us a call at:</p>
                 <a href="tel:+443-203-8144" class="text-primary hover:text-primarydark transition-colors duration-300">
                     +1 (443) 203-8114
                 </a>
@@ -227,7 +319,7 @@
     </form>
 
     <!-- About us -->
-    <div class="px-8 md:px-24 lg:px-48 sm:overflow-hidden">
+    <div class="px-8 md:px-24 lg:px-48 sm:overflow-hidden" id="about-us-section">
         <div class="py-12 flex flex-col items-center ">
             <div class="w-full lg:max-w-xlg flex justify-start items-start flex-col ">
 
@@ -294,6 +386,7 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="validationHelper.js"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
