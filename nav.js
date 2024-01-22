@@ -29,41 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     menuButton.setAttribute('aria-expanded', 'false');
     dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
 
-    // Set the initial state to closed
-    mobileMenuButton.setAttribute('aria-expanded', 'false');
-    mobileMenu.hidden = true;
-
-    mobileMenuButton.addEventListener('click', function () {
-        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-
-        // Toggle the aria-expanded attribute on the button
-        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-
-        // Toggle the hidden class on the mobile menu
-        mobileMenu.hidden = !mobileMenu.hidden;
-
-        // Add/Remove transition classes based on menu state
-        if (mobileMenu.hidden) {
-            mobileMenu.classList.remove('transition', 'ease-out', 'duration-100');
-            mobileMenu.classList.add('transition', 'ease-in', 'duration-75');
-        } else {
-            mobileMenu.classList.remove('transition', 'ease-in', 'duration-75');
-            mobileMenu.classList.add('transition', 'ease-out', 'duration-100');
-        }
-    });
-
-    // Add transition effects
-    mobileMenu.addEventListener('transitionend', function () {
-        // This event is triggered when the transition is complete
-        if (mobileMenu.hidden) {
-            // If the menu is hidden, remove the transition class
-            mobileMenu.classList.remove('transition', 'ease-out', 'duration-100');
-        } else {
-            // If the menu is visible, add the transition class
-            mobileMenu.classList.add('transition', 'ease-out', 'duration-100');
-        }
-    });
-
     // Auto-scroll functionality
     const scrollToSection = function (sectionId) {
         const section = document.getElementById(sectionId);
@@ -79,27 +44,27 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Add click event listeners for menu items
-    document.getElementById('menu-who-we-are').addEventListener('click', function () {
+    document.getElementById('about-us').addEventListener('click', function () {
         scrollToSection('about-us-section');
     });
 
-    document.getElementById('menu-what-we-do').addEventListener('click', function () {
+    document.getElementById('services').addEventListener('click', function () {
         scrollToSection('our-services-section');
     });
 
-    document.getElementById('menu-contact-us').addEventListener('click', function () {
+    document.getElementById('contact-us').addEventListener('click', function () {
         scrollToSection('contactForm contact-form-section');
     });
 
-    document.getElementById('menu-who-we-are-mobile').addEventListener('click', function () {
+    document.getElementById('about-us-mobile').addEventListener('click', function () {
         scrollToSection('about-us-section');
     });
 
-    document.getElementById('menu-what-we-do-mobile').addEventListener('click', function () {
+    document.getElementById('services-mobile').addEventListener('click', function () {
         scrollToSection('our-services-section');
     });
 
-    document.getElementById('menu-contact-us-mobile').addEventListener('click', function () {
+    document.getElementById('contact-us-mobile').addEventListener('click', function () {
         scrollToSection('contactForm contact-form-section');
     });
 
