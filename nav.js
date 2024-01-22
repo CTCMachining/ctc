@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Close the mobile menu after clicking
         mobileMenuButton.setAttribute('aria-expanded', 'false');
-        mobileMenu.hidden = true;
     };
 
     // Add click event listeners for menu items
@@ -58,14 +57,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('about-us-mobile').addEventListener('click', function () {
         scrollToSection('about-us-section');
+        // Close the dropdown
+        menuButton.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+        dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
     });
 
     document.getElementById('services-mobile').addEventListener('click', function () {
         scrollToSection('our-services-section');
+        // Close the dropdown
+    menuButton.setAttribute('aria-expanded', 'false');
+    dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+    dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
     });
 
     document.getElementById('contact-us-mobile').addEventListener('click', function () {
         scrollToSection('contactForm contact-form-section');
+        // Close the dropdown
+    menuButton.setAttribute('aria-expanded', 'false');
+    dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+    dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
     });
 
     // Add scroll event listener to close the mobile menu
