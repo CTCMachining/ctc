@@ -1,29 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
-    const mobileMenu = document.getElementById('mobile-menu');
     const menuButton = document.getElementById('menu-button');
     const dropdownMenu = document.getElementById('dropdown-menu');
 
-    menuButton.addEventListener('click', () => {
-      const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!expanded));
+    let isScrolling = false;
 
-      if (!expanded) {
-        dropdownMenu.classList.add('transition', 'ease-out', 'duration-100', 'transform', 'opacity-100', 'scale-100');
-        dropdownMenu.classList.remove('ease-in', 'duration-75', 'opacity-0', 'scale-95');
-      } else {
-        dropdownMenu.classList.add('transition', 'ease-in', 'duration-75', 'opacity-0', 'scale-95');
-        dropdownMenu.classList.remove('ease-out', 'duration-100', 'opacity-100', 'scale-100');
-      }
+    menuButton.addEventListener('click', () => {
+        const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!expanded));
+
+        if (!expanded) {
+            dropdownMenu.classList.add('transition', 'ease-out', 'duration-100', 'transform', 'opacity-100', 'scale-100');
+            dropdownMenu.classList.remove('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+            isScrolling = false;
+        } else {
+            dropdownMenu.classList.add('transition', 'ease-in', 'duration-75', 'opacity-0', 'scale-95');
+            dropdownMenu.classList.remove('ease-out', 'duration-100', 'opacity-100', 'scale-100');
+        }
     });
 
     // Close the dropdown when clicking outside
     document.addEventListener('click', (event) => {
-      if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        menuButton.setAttribute('aria-expanded', 'false');
-        dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
-        dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
-      }
+        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            menuButton.setAttribute('aria-expanded', 'false');
+            dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+            dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+        }
     });
 
     menuButton.setAttribute('aria-expanded', 'false');
@@ -66,28 +68,32 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('services-mobile').addEventListener('click', function () {
         scrollToSection('our-services-section');
         // Close the dropdown
-    menuButton.setAttribute('aria-expanded', 'false');
-    dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
-    dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+        menuButton.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+        dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
     });
 
     document.getElementById('contact-us-mobile').addEventListener('click', function () {
         scrollToSection('contactForm contact-form-section');
         // Close the dropdown
-    menuButton.setAttribute('aria-expanded', 'false');
-    dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
-    dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+        menuButton.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+        dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
     });
 
-      // Add scroll event listener to close the mobile menu
-      window.addEventListener('scroll', function () {
-        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    // Add scroll event listener to set the scrolling flag
+    window.addEventListener('scroll', function () {
+        isScrolling = true;
+    });
 
-        if (isExpanded) {
+    // Add scroll event listener to close the mobile menu
+    window.addEventListener('scroll', function () {
+        if (isScrolling) {
             // Close the mobile menu
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-expanded', 'false');
             dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
             dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+            isScrolling = false; // Reset the scrolling flag
         }
     });
 });
