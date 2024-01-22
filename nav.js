@@ -79,14 +79,15 @@ document.addEventListener('DOMContentLoaded', function () {
     dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
     });
 
-    // Add scroll event listener to close the mobile menu
-    window.addEventListener('scroll', function () {
-        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      // Add scroll event listener to close the mobile menu
+      window.addEventListener('scroll', function () {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
 
         if (isExpanded) {
             // Close the mobile menu
             mobileMenuButton.setAttribute('aria-expanded', 'false');
-            mobileMenu.hidden = true;
+            dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+            dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
         }
     });
 });
