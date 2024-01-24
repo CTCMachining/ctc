@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
     <!-- Nav bar -->
     <nav class="bg-white">
         <div class="mx-auto px-2 sm:px-6 lg:px-8 border-b border-t border-gray-900/10">
@@ -75,17 +76,6 @@
                                 </svg>
                             </button>
                         </div>
-
-                        <!--
-                          Dropdown menu, show/hide based on menu state.
-                      
-                          Entering: "transition ease-out duration-100"
-                            From: "transform opacity-0 scale-95"
-                            To: "transform opacity-100 scale-100"
-                          Leaving: "transition ease-in duration-75"
-                            From: "transform opacity-100 scale-100"
-                            To: "transform opacity-0 scale-95"
-                        -->
                         <div class="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
                             id="dropdown-menu">
@@ -110,16 +100,17 @@
 
     </nav>
 
-
-
+   
     <!-- Landing Page -->
-    <div class="px-8 md:px-24 lg:px-48 h-screen flex flex-col justify-center" style="height: calc(100vh - 4rem)">
-        <div class="py-12 flex flex-col items-center text-center lg:px-28">
-            <h1 class="text-5xl font-bold tracking-tight text-gray-900 text-center">
+    <div class=" px-8 pt-12 md:px-24 lg:px-48 flex flex-col justify-center" >
+        <div class="flex flex-col items-center text-center lg:px-28">
+            <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 text-center">
                 Welcome to <span class="text-primary">CTC</span>
             </h1>
             <p class="mt-6 text-lg leading-8 text-gray-600">A CNC Milling company where quality and customer service is
                 our #1 priority.</p>
+
+            
             <p class="mt-6 text-lg leading-8 text-gray-600">If you already know what you need, please proceed straight
                 to our inquiry form for prompt service.</p>
             <p class="mt-6 text-lg leading-8 text-gray-600">If this is your first visit, take a moment to learn about
@@ -134,16 +125,51 @@
                         d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
                 </svg>
             </button>
-        </div>
 
+            
+            
+        </div>
+        
+        
     </div>
+    <div class="pb-12">
+        <div class="mx-auto max-w-full px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      
+            <div class="mt-10 bg-gray-50 rounded-md flex flex-wrap gap-0">
+                <div class="group  relative w-full lg:w-1/4">
+                    <div class="w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="imageSlide/nobackground_1.png" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover">
+                    </div>
+                </div>
+                <div class="group  relative w-full lg:w-1/4">
+                    <div class="w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="imageSlide/nobackground_2.png" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover">
+                    </div>
+                </div>
+                <div class="group relative w-full lg:w-1/4">
+                    <div class="w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="imageSlide/nobackground_4.png" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover">
+                    </div>
+                </div>
+                <div class="group  w-full lg:w-1/4">
+                    <div class="w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="imageSlide/nobackground_3.png" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- More products... -->
+            </div>
+        </div>
+    </div>
+
+    
     <!-- Our Services -->
     <div class="px-8  md:px-24 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden"
         id="our-services-section">
         <div class="py-12 border-t border-gray-900/10 ">
             <div
                 class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-x-0 gap-y-12 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                <div class="lg:pr-16 lg:pt-4">
+                <div class="lg:pr-16 ">
                     <div class="lg:max-w-lg">
                         <h2 class="text-base font-semibold leading-7 text-primary">Precision Engineering</h2>
                         <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -221,7 +247,10 @@
                         class="rounded-xl shadow-lg ring-1 ring-gray-400/10 w-full h-auto lg:w-[56rem] lg:max-w-none lg:h-auto object-cover lg:object-scale-down" />
                 </div>
             </div>
+
+            
         </div>
+        
     </div>
 
     <!-- How to Work with Us -->
