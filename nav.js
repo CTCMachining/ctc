@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById('contact-us').addEventListener('click', function () {
-        scrollToSection('contactForm contact-form-section');
+        scrollToSection('contact-form-section');
     });
 
     document.getElementById('about-us-mobile').addEventListener('click', function () {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById('contact-us-mobile').addEventListener('click', function () {
-        scrollToSection('contactForm contact-form-section');
+        scrollToSection('contact-form-section');
         // Close the dropdown
         menuButton.setAttribute('aria-expanded', 'false');
         dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
