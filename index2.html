@@ -283,7 +283,9 @@
 
 
     <!-- Contact Us -->
-    <form id="contactForm contact-form-section" action="http://localhost:3000/send-email" method="post">
+    <form id="contactForm contact-form-section" action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="accessKey" value="5856c033-5e5b-4299-8024-7c75bd44c8b7">
+        <input type="text" name="honeypot" style="display: none;">
         <div class="space-y-12 px-8  md:px-24 lg:px-48">
             <div class="border-b border-t border-gray-900/10 pb-12">
                 <div class="grid grid-cols-1 sm:grid-cols-6 gap-x-6">
@@ -346,7 +348,7 @@
                             of
                             Inquiry</label>
                         <div class="mt-2">
-                            <textarea id="inquiry" name="inquiry" rows="3"
+                            <textarea id="inquiry" name="message" rows="3"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                                 required></textarea>
                         </div>
@@ -366,6 +368,7 @@
                 </a>
             </div>
         </div>
+        <input type="hidden" name="redirectTo" value="https://ctcmachining.com/success">
     </form>
 
     <!-- About us -->
