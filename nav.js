@@ -5,6 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let isScrolling = false;
 
+    // Function to disable links in the hidden menu
+    const disableMenuLinks = () => {
+        const menuLinks = document.querySelectorAll('#dropdown-menu a');
+        menuLinks.forEach(link => {
+            link.classList.add('pointer-events-none'); // Disable pointer events
+            link.setAttribute('tabindex', '-1'); // Remove tabindex
+        });
+    };
+
+    // Function to enable links in the hidden menu
+    const enableMenuLinks = () => {
+        const menuLinks = document.querySelectorAll('#dropdown-menu a');
+        menuLinks.forEach(link => {
+            link.classList.remove('pointer-events-none'); // Enable pointer events
+            link.setAttribute('tabindex', '0'); // Restore tabindex
+        });
+    };
+
+    disableMenuLinks();
+
     menuButton.addEventListener('click', () => {
         const expanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', String(!expanded));
@@ -12,10 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!expanded) {
             dropdownMenu.classList.add('transition', 'ease-out', 'duration-100', 'transform', 'opacity-100', 'scale-100');
             dropdownMenu.classList.remove('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+            enableMenuLinks(); // Enable links when the menu is open
             isScrolling = false;
         } else {
             dropdownMenu.classList.add('transition', 'ease-in', 'duration-75', 'opacity-0', 'scale-95');
             dropdownMenu.classList.remove('ease-out', 'duration-100', 'opacity-100', 'scale-100');
+            disableMenuLinks(); // Disable links when the menu is closed
         }
     });
 
@@ -25,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             menuButton.setAttribute('aria-expanded', 'false');
             dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
             dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+            disableMenuLinks(); // Disable links when the menu is closed
         }
     });
 
@@ -94,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdownMenu.classList.remove('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
             dropdownMenu.classList.add('ease-in', 'duration-75', 'opacity-0', 'scale-95');
             isScrolling = false; // Reset the scrolling flag
+            disableMenuLinks(); // Disable links when the menu is closed
         }
     });
 });
