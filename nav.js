@@ -62,9 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Scroll to the calculated position
         window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-
-        // Close the mobile menu after clicking
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
     };
 
     // Add click event listeners for menu items
