@@ -4,23 +4,439 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTC Machining</title>
+    <meta name="description"
+        content="CTC Machining offers high-quality CNC milling services with precision engineering and custom part designs. Contact us for customized fixturing, industry solutions, and prompt customer service.">
+    <title>CTC Machining | Precision CNC Milling Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Nav bar -->
+    <nav class="bg-white">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8 border-b border-gray-900/10">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Desktop Menu -->
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="overflow-hidden flex items-center">
+                        <img src="images/logopng.png" class="h-6 lg:h-10 w-auto" alt="CTC Machining Logo">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4 justify-center sm:justify-start" id="desktop-menu">
+                            <a href="#"
+                                class="text-gray-900  hover:text-gray-600 rounded-md px-3 py-2 text-md font-medium"
+                                aria-current="page" id="about-us">About us</a>
+                            <a href="#"
+                                class="text-gray-900 hover:text-gray-600 rounded-md px-3 py-2 text-md font-medium"
+                                id="services">Services</a>
+                            <a href="#"
+                                class="text-gray-900 hover:text-gray-600 rounded-md px-3 py-2 text-md font-medium"
+                                id="contact-us">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <div class="relative inline-block text-left">
+                        <div>
+                            <button type="button"
+                                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                Skip to
+                                <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+                            id="dropdown-menu">
+                            <div class="py-1" role="none">
+                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                    id="services-mobile">Services</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm border-b border-gray-900/10"
+                                    role="menuitem" tabindex="-1" id="about-us-mobile">About us</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm " role="menuitem" tabindex="-1"
+                                    id="contact-us-mobile">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
     <!-- Landing Page -->
-    <div class="px-8 md:px-24 lg:px-48 h-screen flex flex-col justify-center" style="height: calc(100vh - 4rem)">
-        <div class="py-12 flex flex-col items-center text-center lg:px-28">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900 text-center">
+    <div class=" px-8 pt-12 pb-12 md:px-24 lg:px-48 flex flex-col justify-center overflow-hidden">
+        <div class="flex flex-col items-center text-center lg:px-28">
+            <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 text-center">
                 Welcome to <span class="text-primary">CTC</span>
             </h1>
-            <p class="mt-6 text-lg leading-8 text-gray-600">A CNC Milling company where quality and customer service is
+            <p class="mt-3 text-lg leading-8 text-gray-600">A CNC Milling company where quality and customer service is
                 our #1 priority.</p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">Site coming soon...</p>
+
+            <div class="flex items-center justify-center py-6">
+                <div class="flex items-center">
+                    <div class="w-56 h-px bg-primary mr-2"></div> <!-- Horizontal line -->
+                    <svg id="gear-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-gear-wide-connected h-6 w-auto" viewBox="0 0 16 16">
+                        <path
+                            d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z" />
+                    </svg><!-- Gear icon -->
+                    <div class="w-56 h-px bg-gray-900 ml-2"></div> <!-- Horizontal line -->
+                </div>
+            </div>
+
+        </div>
+        <div class="flex flex-col items-start lg:px-28">
+            <h2 class="text-base font-semibold leading-7 text-primary flex items-start justify-start">New Here?</h2>
+            <p class="mt-1 pb-6 text-lg leading-8 text-gray-600">If this is your first visit, take a moment to learn
+                about
+                our high-precision machining services and industry solutions.</p>
+            <h2 class="text-base font-semibold leading-7 text-primary flex items-start justify-start">Returning
+                Customers</h2>
+            <p class="mt- text-lg leading-8 text-gray-600">If you already know what you need, please proceed straight
+                to our inquiry form for prompt service.</p>
+
+            <button type="button"
+                onclick="document.getElementById('contactForm contact-form-section').scrollIntoView({ behavior: 'smooth' });"
+                class="flex flex-row items-center gap-3 rounded-md mt-6 bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primarylight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                Skip to Inquiry
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                    class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                </svg>
+            </button>
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Slider -->
+    <div class="px-8 md:px-24 lg:px-48">
+        <div class="pb-12">
+            <div
+                class="flex items-center justify-center max-w-screen-xl mx-auto  bg-gray-50 border-x border-y rounded-lg rounded-lg">
+                <div id="default-carousel" class="relative  w-full max-w-2xl " data-carousel="slide">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-96 overflow-hidden rounded-lg">
+                        <!-- Machine Parts -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="imageSlide/nobackground_1.png"
+                                class="absolute block max-w-sm -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="CTC Made Machine Part">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="imageSlide/nobackground_2.png"
+                                class="absolute block max-w-sm -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="CTC Made Machine Part">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="imageSlide/nobackground_3.png"
+                                class="absolute block max-w-sm -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="CTC Made Machine Part">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="imageSlide/nobackground_4.png"
+                                class="absolute block max-w-sm -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="CTC Made Machine Part">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="imageSlide/nobackground_5.png"
+                                class="absolute block max-w-sm -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="CTC Made Machine Part">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="imageSlide/nobackground_6.png"
+                                class="absolute block max-w-sm -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="CTC Made Machine Part">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Our Services -->
+    <div class="px-8 md:px-24 lg:px-48 overflow-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden"
+        id="our-services-section">
+        <div class="py-12 border-t border-gray-900/10 ">
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-x-0 gap-y-12 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                <div class="lg:pr-16 ">
+                    <div class="lg:max-w-lg">
+                        <h2 class="text-base font-semibold leading-7 text-primary">Precision Engineering</h2>
+                        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Our Services</p>
+                        <p class="mt-6 text-lg leading-8 text-gray-600">We offer 3-axis vertical milling work and can
+                            custom design parts specific to your needs. We also have the capability to reverse engineer
+                            existing parts you need. Whether it is customized fixturing and workholding for one-off
+                            designs or production runs, we’ve got you covered.</p>
+                        <p class="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+                            Current machine capabilities include but are <u>not</u> limited to:</p>
+                        <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="absolute left-1 top-1 h-5 w-5 text-primary  bi bi-aspect-ratio"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
+                                        <path
+                                            d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0z" />
+                                    </svg>
+                                    X-Y-Z
+                                </dt>
+                                <dd>
+                                    <ul>
+                                        <li>X-Axis: 18 inches (457 mm)</li>
+                                        <li>Y-Axis: 11 inches (279 mm)</li>
+                                        <li>Z-Axis: 16.25 inches (413 mm)</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="absolute left-1 top-1 h-5 w-5 text-primary bi bi-cpu"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                                    </svg>
+                                    Performance
+                                </dt>
+                                <dd>
+                                    <ul>
+                                        <li>Spindle Power: 2 hp / 1.49 kW</li>
+                                        <li>Maximum Speed: 10,000 RPM</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="absolute left-1 top-1 h-5 w-5 text-primary bi bi-gear"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+                                        <path
+                                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+                                    </svg>
+                                    Tooling and Automation
+                                </dt>
+                                <dd>
+                                    <ul>
+                                        <li>12 tool automatic tool changer</li>
+                                        <li>Probing capabilities</li>
+                                        <li>Electronic tool setter</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <!-- Our Services Picture -->
+                <div
+                    class="flex justify-center lg:justify-start items-center lg:flex items-center lg:block lg:max-w-xlg h-full lg:relative">
+                    <img src="images/IMG_3395.jpg" alt="The Tormach Machine"
+                        class="rounded-xl shadow-lg ring-1 ring-gray-400/10 w-full lg:w-96 lg:h-auto object-cover "
+                        style="max-height: 850px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Work with Us -->
+    <div class="px-8  md:px-24 lg:px-48 sm:overflow-hidden">
+        <div class="py-12 border-t border-gray-900/10 flex justify-center items-center">
+            <div class="w-full lg:max-w-lg flex justify-center items-center flex-col text-center">
+                <h2 class="text-base font-semibold leading-7 text-primary">Need Parts?</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    How To Work With Us</p>
+                <p class="mt-6 text-lg text-gray-600 mx-4">Contact us by sending an email with the part you are looking
+                    to create and/or with an inquiry regarding what you are looking for. We’ll then work with you to
+                    determine the customization required, timing, and pricing.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor"
+                    class="bi bi-arrow-down text-primary pt-6" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <form id="contactForm contact-form-section" action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="accessKey" value="6bf18917-391f-4d2f-ae18-91afa9f8f64f">
+        <input type="text" name="honeypot" style="display: none;">
+        <div class="space-y-12 px-8  md:px-24 lg:px-48">
+            <div class="border-b border-t border-gray-900/10 pb-12">
+                <div class="grid grid-cols-1 sm:grid-cols-6 gap-x-6">
+                    <div class="sm:col-span-3 lg:col-span-3">
+                        <h2 class="text-base font-semibold text-xl leading-7 text-gray-900 pt-12">Contact Us</h2>
+                        <!-- Use col-span-3 at larger screen sizes to make the paragraph take up half the grid -->
+                        <p class="mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">Complete and submit the
+                            contact
+                            form below to
+                            inquire about our services or a specific job. We’ll make it our promise to get back to
+                            you
+                            within 24-48 hours.</p>
+                    </div>
+                </div>
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First
+                            name</label>
+                        <div class="mt-2">
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                required>
+                        </div>
+                    </div>
+                    <div class="sm:col-span-3">
+                        <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last
+                            name</label>
+                        <div class="mt-2">
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                required>
+                        </div>
+                    </div>
+                    <div class="sm:col-span-3">
+                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email
+                            address</label>
+                        <div class="mt-2">
+                            <input type="email" id="email" name="email" autocomplete="email"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6"
+                                required>
+                            <span id="emailError" class="hidden text-sm text-red-600">Invalid email address</span>
+
+                        </div>
+                    </div>
+                    <div class="sm:col-span-3">
+                        <label for="tel" class="block text-sm font-medium leading-6 text-gray-900">Phone Number
+                            (Optional)</label>
+                        <div class="mt-2">
+                            <input id="tel" name="tel" type="tel" autocomplete="tel"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    <div class="col-span-full">
+                        <label for="inquiry" class="block text-sm font-medium leading-6 text-gray-900">Description
+                            of
+                            Inquiry</label>
+                        <div class="mt-2">
+                            <textarea id="inquiry" name="message" rows="3"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex items-center justify-start gap-x-6">
+                    <button type="submit"
+                        class="rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primarylight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send
+                        Inquiry</button>
+                    <p class="flex items-center font-bold">OR</p>
+                </div>
+                <p class="py-6 mt-1 text-sm leading-6 text-gray-600 sm:col-span-3">If you prefer to contact us by phone,
+                    give us a call at:</p>
+                <a href="tel:+443-203-8144" class="text-primary hover:text-primarydark transition-colors duration-300">
+                    +1 (443) 203-8114
+                </a>
+            </div>
+        </div>
+        <input type="hidden" name="redirectTo" value="https://ctcmachining.com/success">
+    </form>
+
+    <!-- About us -->
+    <div class="px-8 md:px-24 lg:px-48 sm:overflow-hidden" id="about-us-section">
+        <div class="py-12 flex flex-col items-center ">
+            <div class="w-full lg:max-w-xlg flex justify-start items-start flex-col ">
+                <h2 class="text-base font-semibold leading-7 text-primary">Who are we?</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl pb-6">
+                    About Us</p>
+                <p class="text-lg text-gray-600">CTC Machining, a CNC Milling LLC, prioritizes quality and
+                    customer service. Founded and led by CEO Ben Shawver, a machining industry veteran with over 30
+                    years of experience, Ben ensures every project meets high standards. His career began at Western
+                    Industrial Machining in high school, followed by a 9-year tenure at Ridge Engineering, where he
+                    mastered CNC milling and programming. Ben then contributed his skills to the defense sector at
+                    Orbital ATK and Fleck Machine.</p>
+                <p class="mt-6 text-lg text-gray-600">
+                    Later, he returned to Ridge Engineering, managing raw material purchases and supplier
+                    negotiations. After another 9 years, Ben joined Raloid Corporation as Director of Purchasing and
+                    CNC Mill and Lathe Supervisor, a role he has held for over four years. In 2022, Ben acquired a
+                    Tormach
+                    CNC
+                    Mill, leveraging his expertise to create custom parts for a diverse clientele, including commercial
+                    enterprises, private individuals, and the racing industry.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Meet the Team -->
+    <div class="space-y-6 pb-12 px-8  md:px-24 lg:px-48">
+        <div class="mx-auto max-w-none xl:grid xl:grid-cols-3 gap-6">
+            <div class="col-span-1 flex flex-col justify-start">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Meet Our Team</h2>
+                <p class="mt-6 pb-6 text-lg leading-8 text-gray-600">We are a small, dynamic team, profoundly
+                    passionate
+                    about what we do.
+                    Our guiding principle is a steadfast commitment to quality excellence and placing customer
+                    service
+                    at the
+                    forefront.</p>
+            </div>
+            <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- Team Members -->
+                <div class="flex flex-col items-center">
+                    <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50" src="images/CEO.jpg" alt="Ben Shawver">
+                    <h3 class="text-xl font-semibold mt-4">Ben Shawver</h3>
+                    <p class="text-primary">President / CEO</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img class="mt-6 h-32 w-32 mx-auto rounded-full bg-gray-50" src="images/coopng.jpg"
+                        alt="Carol Shawver">
+                    <h3 class="text-xl font-semibold mt-4">Carol Shawver</h3>
+                    <p class="text-primary">COO</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Rights Reserved -->
+    <footer>
+        <div class=" px-8  pb-12 md:px-24 lg:px-48 flex flex-col justify-center overflow-hidden">
+
+            <div class="border-t pt-12 border-gray-900/10 flex flex-col items-center justify-center">
+                <div class="overflow-hidden flex pb-6 ">
+                    <img src="images/logopng.png" class="h-6 lg:h-10 w-auto" alt="CTC Machining Logo">
+                </div>
+                <p class="text-lg leading-8 text-gray-600 flex ">
+                    &#169; 2024 CTC Machining. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="validationHelper.js"></script>
+    <script src="nav.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>
