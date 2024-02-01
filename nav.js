@@ -30,14 +30,20 @@ document.addEventListener('DOMContentLoaded', function () {
         menuButton.setAttribute('aria-expanded', String(!expanded));
 
         if (!expanded) {
-            dropdownMenu.classList.add('transition', 'ease-out', 'duration-100', 'transform', 'opacity-100', 'scale-100');
-            dropdownMenu.classList.remove('ease-in', 'duration-75', 'opacity-0', 'scale-95');
-            enableMenuLinks(); // Enable links when the menu is open
-            isScrolling = false;
+            dropdownMenu.classList.remove('hidden');
+            setTimeout(() => {
+                dropdownMenu.classList.add('transition', 'ease-out', 'duration-100', 'opacity-100', 'scale-100');
+                dropdownMenu.classList.remove('ease-in', 'duration-75', 'opacity-0', 'scale-95');
+                enableMenuLinks(); // Enable links when the menu is open
+                isScrolling = false;
+            }, 25);
         } else {
             dropdownMenu.classList.add('transition', 'ease-in', 'duration-75', 'opacity-0', 'scale-95');
             dropdownMenu.classList.remove('ease-out', 'duration-100', 'opacity-100', 'scale-100');
-            disableMenuLinks(); // Disable links when the menu is closed
+            setTimeout(() => {
+                dropdownMenu.classList.add('hidden'); // Hide the dropdown menu after transition
+                disableMenuLinks(); // Disable links when the menu is closed
+            }, 25);
         }
     });
 
